@@ -5,6 +5,9 @@
 name: Deploy Next.js site to Pages
 
 on:
+  repository_dispatch:
+    types: [update_blog]
+
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
