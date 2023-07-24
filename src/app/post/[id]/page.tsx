@@ -1,5 +1,6 @@
 import { getObject, getList, Blog } from "../../../libs/microcms";
 import { notFound } from "next/navigation";
+import { marked } from 'marked';
 
 export async function generateStaticParams() {
   const posts = await getList();
@@ -30,8 +31,9 @@ export default async function Post({
       <div className="mt-2">
         <p>{blog.revisedAt}</p>
       </div>
-
-      <div className="py-5" dangerouslySetInnerHTML={{__html: blog.body ?? ""}}/>
+      <div className="prose">
+        <div className="py-5" dangerouslySetInnerHTML={{__html: marked(blog.markdown ?? "")}}/>
+      </div>
     </main>
   );
 };

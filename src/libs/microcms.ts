@@ -24,6 +24,7 @@ export type Blog = {
   id: string;
   title: string;
   body: string;
+  markdown: string;
   eyecatch?: MicroCMSImage;
  } & MicroCMSDate;
 
