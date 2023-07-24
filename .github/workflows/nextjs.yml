@@ -79,8 +79,8 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} npm run build
         env:
-          API_KEY: ${{ secrets.API_KEY }}
-          SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
+          API_KEY: ${{ secrets.NEXT_PUBLIC_API_KEY }}
+          SERVICE_DOMAIN: ${{ secrets.NEXT_PUBLIC_SERVICE_DOMAIN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
