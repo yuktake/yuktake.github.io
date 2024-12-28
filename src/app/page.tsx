@@ -11,7 +11,12 @@ export default async function Home() {
         </p>
       </div>
 
-      <div className="flex flex-col items-start justify-start w-full">
+      <div>
+        <p className="mt-2">This blog is a space where Yuk shares daily learnings and thoughts on topics of interest.</p>
+        <p>If it is hard to understand my English, please refer to the articles translated by ChatGPT.</p>
+      </div>
+
+      <div className="flex flex-col items-center justify-start max-w-880">
         {contents.map((blog) => (
           <div key={blog.id} className="mb-5 mt-5 w-full">
             <a href={"/post/"+blog.id} className="text-2xl font-bold font-mono break-all">{blog.title}</a>
