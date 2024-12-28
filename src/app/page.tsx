@@ -12,6 +12,7 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-col items-start justify-start w-full">
+      <div className="flex flex-col items-center justify-start max-w-880">
         {contents.map((blog) => (
           <div key={blog.id} className="mb-5 mt-5 w-full">
             <a href={"/post/"+blog.id} className="text-2xl font-bold font-mono break-all">{blog.title}</a>
