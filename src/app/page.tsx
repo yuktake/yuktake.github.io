@@ -14,6 +14,7 @@ export default async function Home() {
       <div>
         <p className="mt-2">This blog is a space where Yuk shares daily learnings and thoughts on topics of interest.</p>
         <p>If it is hard to understand my English, please refer to the articles translated by ChatGPT.</p>
+        <p>※↑ This is already a translation.</p>
       </div>
 
       <div className="flex flex-col items-center justify-start max-w-880">
