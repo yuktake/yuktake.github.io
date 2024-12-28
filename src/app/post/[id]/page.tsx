@@ -24,7 +24,7 @@ export default async function Post({
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-6 w-full">
       <div className="w-full place-items-center z-10 max-w-5xl justify-center font-mono flex">
-        <p className="text-2xl font-bold font-mono flex justify-center border-b border-gray-300 w-auto rounded-xl border bg-gray-200 p-4 dark:bg-zinc-800/30">
+        <p className="w-full break-all text-2xl font-bold font-mono flex justify-center border-b border-gray-300 w-auto rounded-xl border bg-gray-200 p-4 dark:bg-zinc-800/30">
           {blog.title}
         </p>
       </div>
@@ -36,7 +36,7 @@ export default async function Post({
       </div>
 
       <div className="w-full sm:w-full md:w-5/6 lg:w-1/2">
-        <div className="prose text-white">
+        <div className="prose">
           <div className="py-5" dangerouslySetInnerHTML={{__html: marked(blog.markdown ?? "", {mangle:false})}}/>
         </div>
       </div>
