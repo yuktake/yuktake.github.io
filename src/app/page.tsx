@@ -11,10 +11,10 @@ export default async function Home() {
         </p>
       </div>
 
-      <div className="flex flex-col items-start justify-start sm:w-full md:w-5/6 lg:w-1/2">
+      <div className="flex flex-col items-start justify-start w-full">
         {contents.map((blog) => (
-          <div key={blog.id} className="mb-5 mt-5">
-            <a href={"/post/"+blog.id} className="text-2xl font-bold font-mono">{blog.title}</a>
+          <div key={blog.id} className="mb-5 mt-5 w-full">
+            <a href={"/post/"+blog.id} className="text-2xl font-bold font-mono break-all">{blog.title}</a>
             <div className="mt-2" dangerouslySetInnerHTML={{__html: blog.body ?? ""}}/>
             <span>--------</span>
           </div>
