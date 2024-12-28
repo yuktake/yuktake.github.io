@@ -36,7 +36,7 @@ export default async function Post({
       </div>
 
       <div className="w-full sm:w-full md:w-5/6 lg:w-1/2">
-        <div className="prose text-white">
+        <div className="prose">
           <div className="py-5" dangerouslySetInnerHTML={{__html: marked(blog.markdown ?? "", {mangle:false})}}/>
         </div>
       </div>
